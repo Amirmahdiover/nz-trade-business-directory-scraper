@@ -1,0 +1,28 @@
+{
+  "total_raw_records": 15,
+  "total_records_scraped": 15,
+  "duplicates_removed": 0,
+  "final_records": 15,
+  "missing_business_name": 0,
+  "missing_trade_category": 0,
+  "missing_region": 0,
+  "missing_phone": 2,
+  "missing_description": 0,
+  "failed_urls_count": 0,
+  "output_files": [
+    "outputs/nz_trade_businesses_master.csv",
+    "outputs/nz_trade_businesses_master.xlsx",
+    "outputs/scraping_summary.json",
+    "outputs/failed_urls.csv"
+  ],
+  "generated_at": "2026-06-20T08:55:49.364318+00:00",
+  "detail_pages_requested": 15,
+  "detail_concurrency": 5,
+  "detail_pages_successful": 15,
+  "detail_pages_failed": 0,
+  "descriptions_from_detail_page": 15,
+  "descriptions_fallback_to_listing_excerpt": 0,
+  "categories_discovered": 64,
+  "categories_requested": 3,
+  "category_pages_scraped": 3
+}

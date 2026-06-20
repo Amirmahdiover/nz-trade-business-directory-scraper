@@ -1,0 +1,7 @@
+pydantic
+openpyxl
+requests
+httpx
+beautifulsoup4
+tenacity
+pytest
