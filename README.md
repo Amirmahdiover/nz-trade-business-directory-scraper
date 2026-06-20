@@ -1,4 +1,4 @@
-# NZ Trade Business Directory Data Extraction Pipeline
+﻿# NZ Trade Business Directory Data Extraction Pipeline
 
 ## Overview
 
@@ -10,7 +10,7 @@ https://tradehq.co.nz/directory/
 
 It discovers trade categories, scrapes explicitly selected category pages with controlled pagination, visits business detail pages for fuller descriptions, cleans and deduplicates records, and delivers traceable CSV, Excel, and JSON outputs.
 
-The project is a business directory scraper—not an e-commerce scraper, AI/RAG application, or spam/lead-generation system. Sample outputs represent limited, controlled runs rather than a claim that the entire website was scraped.
+The project is a business directory scraperâ€”not an e-commerce scraper, AI/RAG application, or spam/lead-generation system. Sample outputs represent limited, controlled runs rather than a claim that the entire website was scraped.
 
 ## Problem This Project Solves
 
@@ -84,11 +84,11 @@ The CSV and Excel Master sheet retain the final seven-field schema. Phone values
 
 `outputs/nz_trade_businesses_master.xlsx` contains:
 
-- `Master` — all final records using the seven-field schema
-- `Summary` — scrape metrics plus records grouped by trade category and region
-- `Failed URLs` — failed category/detail requests or a no-failures note
-- `Categories` — discovered category names, URLs, and available listing counts
-- `Data Quality Notes` — concise validation, phone-handling, description, and public-source notes
+- `Master` â€” all final records using the seven-field schema
+- `Summary` â€” scrape metrics plus records grouped by trade category and region
+- `Failed URLs` â€” failed category/detail requests or a no-failures note
+- `Categories` â€” discovered category names, URLs, and available listing counts
+- `Data Quality Notes` â€” concise validation, phone-handling, description, and public-source notes
 
 ## Example Commands
 
@@ -107,31 +107,31 @@ pytest
 Discover categories:
 
 ```powershell
-python main.py --mode discover-categories --url "[https://tradehq.co.nz/directory/](https://tradehq.co.nz/directory/)"
+python main.py --mode discover-categories --url "https://tradehq.co.nz/directory/"
 ```
 
 Scrape selected categories with a small controlled limit:
 
 ```powershell
-python main.py --mode scrape-categories --url "[https://tradehq.co.nz/directory/](https://tradehq.co.nz/directory/)" --categories electricians,plumbers,builders --limit-per-category 5
+python main.py --mode scrape-categories --url "https://tradehq.co.nz/directory/" --categories electricians,plumbers,builders --limit-per-category 5
 ```
 
 Run the controlled pagination example:
 
 ```powershell
-python main.py --mode scrape-categories --url "[https://tradehq.co.nz/directory/](https://tradehq.co.nz/directory/)" --categories electricians --limit-per-category 15 --max-pages-per-category 2
+python main.py --mode scrape-categories --url "https://tradehq.co.nz/directory/" --categories electricians --limit-per-category 15 --max-pages-per-category 2
 ```
 
 Use concurrent detail-page fetching:
 
 ```powershell
-python main.py --mode scrape-categories --url "[https://tradehq.co.nz/directory/](https://tradehq.co.nz/directory/)" --categories electricians --limit-per-category 15 --max-pages-per-category 2 --detail-concurrency 5
+python main.py --mode scrape-categories --url "https://tradehq.co.nz/directory/" --categories electricians --limit-per-category 15 --max-pages-per-category 2 --detail-concurrency 5
 ```
 
 Allow full pagination for one explicitly selected category:
 
 ```powershell
-python main.py --mode scrape-categories --url "[https://tradehq.co.nz/directory/](https://tradehq.co.nz/directory/)" --categories electricians --max-pages-per-category 0
+python main.py --mode scrape-categories --url "https://tradehq.co.nz/directory/" --categories electricians --max-pages-per-category 0
 ```
 
 Create the manual validation sample and report:
@@ -148,9 +148,9 @@ Controls the maximum total records collected from each selected category across 
 
 ### `--max-pages-per-category`
 
-- `1` — scrape the first category page only
-- `2` — scrape at most two pages
-- `0` — continue until no next page exists, the record limit is reached, or a repeated page URL is detected
+- `1` â€” scrape the first category page only
+- `2` â€” scrape at most two pages
+- `0` â€” continue until no next page exists, the record limit is reached, or a repeated page URL is detected
 
 Unlimited pagination still applies only to explicitly selected categories. It does not trigger a full-site crawl.
 
@@ -158,9 +158,9 @@ Unlimited pagination still applies only to explicitly selected categories. It do
 
 Controls only concurrent business detail-page requests:
 
-- `1` — sequential compatibility mode
-- `3` — default, conservative concurrency
-- `5` — up to five detail requests at once
+- `1` â€” sequential compatibility mode
+- `3` â€” default, conservative concurrency
+- `5` â€” up to five detail requests at once
 
 Category pages and pagination remain sequential. Detail results are restored to their original listing order before export, and individual failures fall back to the listing-page excerpt.
 
