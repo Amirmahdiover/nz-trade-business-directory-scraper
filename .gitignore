@@ -1,4 +1,4 @@
-venv/
+﻿venv/
 **/__pycache__/
 .pytest_cache/
 *.pyc
@@ -9,7 +9,7 @@ data/raw/*.html
 # Generated deliverables are ignored by default.
 outputs/*
 
-# Small portfolio samples and templates may be committed.
+# Small sample outputs and templates may be committed.
 !outputs/sample_nz_trade_businesses.csv
 !outputs/sample_nz_trade_businesses.xlsx
 !outputs/sample_scraping_summary.json

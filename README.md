@@ -2,7 +2,7 @@
 
 ## Overview
 
-This portfolio project is a Python data extraction pipeline for the public New Zealand TradeHQ business directory:
+This project is a Python data extraction pipeline for the public New Zealand TradeHQ business directory:
 
 ```text
 https://tradehq.co.nz/directory/
@@ -248,9 +248,9 @@ This project extracts publicly available business directory information and incl
 
 Scraping should remain controlled and proportional to the actual project need. Before running larger jobs, review the target website's terms, robots guidance, request-rate expectations, and applicable laws. Full-category pagination should be used responsibly and only when required.
 
-## Portfolio Value
+## What This Project Demonstrates
 
-This project demonstrates practical freelance data-extraction skills:
+This project demonstrates practical, reusable data-extraction capabilities:
 
 - inspecting and parsing real directory HTML;
 - discovering and resolving category URLs;

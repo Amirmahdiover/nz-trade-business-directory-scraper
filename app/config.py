@@ -1,4 +1,4 @@
-"""Project configuration values."""
+﻿"""Project configuration values."""
 
 from pathlib import Path
 
@@ -25,7 +25,7 @@ DEFAULT_CATEGORY_LIMIT = 10
 REQUEST_TIMEOUT_SECONDS = 20
 USER_AGENT = (
     "Mozilla/5.0 (compatible; NZTradeBusinessDirectoryScraper/1.0; "
-    "+https://github.com/portfolio-project)"
+    "+https://github.com/Amirmahdiover/nz-trade-business-directory-scraper)"
 )
 
 # TradeHQ CSS selectors for the first real scraping version.
@@ -56,3 +56,4 @@ SCRAPER_SELECTORS = {
 # TradeHQ HTML whenever merged values such as "ElectriciansCanterbury" appear.
 # They currently target separate anchors and should not be broadened to a
 # shared parent without manually checking the live listing-card markup.
+

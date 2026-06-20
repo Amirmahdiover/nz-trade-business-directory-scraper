@@ -1,6 +1,6 @@
 # Sample Output Note
 
-The files under `outputs/` are included for portfolio review. They demonstrate the dataset schema, cleaned public business-directory records, traceable source URLs, summary metrics, failed-URL reporting, professional Excel workbook structure, and manual validation workflow.
+The files under `outputs/` demonstrate output structure and data quality, including the dataset schema, cleaned public business-directory records, traceable source URLs, summary metrics, failed-URL reporting, professional Excel workbook structure, and manual validation workflow.
 
 The sample output comes from limited, controlled TradeHQ runs using selected trade categories and explicit record/page limits. It should not be interpreted as a complete scrape of the TradeHQ website.
 

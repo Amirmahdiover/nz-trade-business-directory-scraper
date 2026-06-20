@@ -1,4 +1,4 @@
-"""Export cleaned records, failed URLs, and the JSON summary."""
+﻿"""Export cleaned records, failed URLs, and the JSON summary."""
 
 import csv
 import json
@@ -334,7 +334,7 @@ def export_records(
     failed_urls_path: Path = FAILED_URLS_OUTPUT_PATH,
     categories_path: Path = TRADE_CATEGORIES_OUTPUT_PATH,
 ) -> None:
-    """Write all portfolio output files."""
+    """Write all output files."""
 
     ensure_directory(OUTPUTS_DIR)
     headers, rows = _records_to_rows(records)
@@ -389,7 +389,7 @@ def export_trade_categories(
     categories: Iterable[TradeCategory],
     output_path: Path = TRADE_CATEGORIES_OUTPUT_PATH,
 ) -> None:
-    """Export discovered categories to a portfolio-friendly CSV."""
+    """Export discovered categories to a review-friendly CSV."""
 
     ensure_directory(output_path.parent)
     with output_path.open("w", encoding="utf-8", newline="") as file:
@@ -406,3 +406,4 @@ def export_trade_categories(
             }
             for category in categories
         )
+
